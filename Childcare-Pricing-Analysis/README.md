@@ -1,19 +1,28 @@
-# Portfolio Milestones
+# Childcare Pricing Analysis
 
-This folder contains all portfolio milestone submissions completed during the Applied Data Science program.
+## Overview
+This project analyzes childcare pricing patterns to understand cost variations across regions and demographics.
 
-## Contents
+---
 
-- Milestone 1 – Project Proposal
-- Milestone 2 – Draft White Paper
-- Milestone 3 – Final Project Materials
+## Objectives
+- Analyze childcare cost distribution
+- Compare pricing across regions
+- Identify affordability patterns
+- Provide business insights
 
-Each milestone includes documentation, code, presentations, and supporting files.
+---
 
-## Skills Demonstrated
+## Key Focus Areas
+- Regional pricing differences
+- Cost trends over time
+- Data visualization for insights
 
-- Data Cleaning
-- Exploratory Data Analysis
-- Predictive Modeling
-- Data Visualization
-- Technical Writing
+---
+
+## Tools Used
+- Python
+- Pandas
+- Matplotlib
+- Seaborn
+- Excel / CSV datasets
