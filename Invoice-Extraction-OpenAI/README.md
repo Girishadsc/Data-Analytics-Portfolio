@@ -1,18 +1,41 @@
-# Prompt Engineering
+# Invoice Extraction using OpenAI
 
-This folder contains prompt engineering assignments and examples using Large Language Models.
+## Overview
+This project uses prompt engineering with OpenAI to extract structured data from unstructured invoice text.
 
-## Topics Covered
+---
 
-- Zero-shot Prompting
-- One-shot Prompting
-- Few-shot Prompting
-- Chain of Thought Prompting
-- Structured Output Generation
-- JSON Extraction
+## Objectives
+- Extract invoice fields (name, amount, date, items)
+- Convert unstructured text into structured JSON
+- Validate and clean extracted output
+- Demonstrate API-based automation
 
-## Technologies
+---
 
+## Methodology
+- Designed structured prompts for extraction
+- Used zero-shot and few-shot prompting
+- Parsed model output into JSON format
+- Handled incomplete or noisy inputs
+
+---
+
+## Example Output
+
+```json
+{
+  "vendor": "",
+  "invoice_date": "",
+  "total_amount": "",
+  "items": []
+}
+```
+
+---
+
+## Tools Used
 - OpenAI API
 - Python
+- JSON parsing
 - Jupyter Notebook
