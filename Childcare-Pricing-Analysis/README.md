@@ -35,12 +35,12 @@ The project included:
 
 ### Childcare Pricing Comparison
 
-![Pricing Comparison](images/childcare-pricing-comparison.png)
+![Pricing Comparison](images/childcare-pricing-comparison.PNG)
 
 
 ### Pricing Distribution
 
-![Pricing Distribution](images/childcare-pricing-distribution.png)
+![Pricing Distribution](images/childcare-pricing-distribution.PNG)
 
 
 ## Tools and Technologies
