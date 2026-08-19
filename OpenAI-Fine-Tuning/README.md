@@ -1,64 +1,100 @@
-# TSA Complaint Analysis Dashboard
+# OpenAI Fine-Tuning Experiment
 
-## Transforming Passenger Feedback Data into Operational Insights
+## Adapting a Language Model to Produce Consistent Emoji-Oriented Responses
 
 
 ## Project Overview
 
-Customer feedback provides valuable information about service quality, but organizations need effective analytics solutions to identify trends and improvement opportunities.
+This project adapts a course exercise involving Azure OpenAI fine-tuning to the OpenAI API.
 
-This project analyzes TSA passenger complaint data to identify patterns across airports, complaint categories, and time periods. The goal was to transform raw complaint data into actionable insights through data analysis and visualization.
+The objective was to understand the workflow involved in preparing training data and creating a fine-tuning job for a language model.
 
-
-## Business Problem
-
-Transportation organizations receive thousands of passenger complaints every year. Without effective analysis, it is difficult to determine:
-
-- Which airports experience higher complaint volumes?
-- What issues contribute most to dissatisfaction?
-- Where should operational improvements be prioritized?
+The project used a small custom training dataset designed to teach the model a specific response behavior involving emojis.
 
 
-## Analytical Approach
+## Objective
 
-The project followed a complete data analytics workflow:
+The project demonstrates the process of:
 
-- Data cleaning and preparation
-- Exploratory data analysis
-- Complaint category analysis
-- Geographic analysis
-- Dashboard development
+•	Preparing fine-tuning examples 
 
+•	Formatting training data 
 
-## Dashboard Preview
+•	Working with the OpenAI API 
 
-### TSA Complaint Dashboard
+•	Configuring a fine-tuning workflow 
 
-![TSA Dashboard](images/tsa-dashboard-overview.png)
+•	Understanding model adaptation 
 
+•	Evaluating the practical requirements and limitations of fine-tuning 
 
-### Geographic Complaint Analysis
+## Training Dataset
+A set of approximately 50 training examples was prepared for the fine-tuning exercise.
+The examples were designed around the desired behavior of producing emoji-oriented responses.
+The purpose was not to create a production model, but to demonstrate the mechanics and concepts behind fine-tuning.
 
-![Complaint Map](images/tsa-complaint-map.png)
+## Methodology
+The workflow included:
 
+1.	Preparing training examples. 
+2.	Formatting the examples for fine-tuning. 
+3.	Configuring the OpenAI client. 
+4.	Uploading/preparing the training data. 
+5.	Attempting to create a fine-tuning job. 
+6.	Troubleshooting API access and permissions. 
+7.	Evaluating the expected fine-tuned model behavior.
+   
+## Important Implementation Learning
+The project demonstrated that fine-tuning is dependent not only on code but also on:
 
-## Tools and Technologies
+•	API access 
 
-- Python
-- Pandas
-- Power BI
-- Data Visualization
-- Exploratory Data Analysis
+•	Account permissions 
 
+•	Model availability 
+
+•	Usage limits 
+
+•	Correct training-data formatting 
+
+•	API configuration 
+
+During development, the fine-tuning job creation encountered a PermissionDeniedError, demonstrating an important practical limitation when working with hosted model APIs.
+
+## Technologies
+
+•	Python 
+
+•	OpenAI API 
+
+•	OpenAI Python SDK 
+
+•	Large Language Models 
+
+•	Fine-Tuning 
+
+•	Jupyter Notebook 
 
 ## Skills Demonstrated
 
-- Business Analytics
-- Data Storytelling
-- Dashboard Development
-- Customer Experience Analytics
+•	OpenAI API Integration 
 
+•	Training Data Preparation 
 
-## Business Impact
+•	Fine-Tuning Concepts 
 
-This project demonstrates how organizations can transform customer feedback data into actionable insights that support operational improvements and better customer experiences.
+•	Prompt/Response Formatting 
+
+•	API Troubleshooting 
+
+•	Generative AI Development
+
+•	Model Adaptation 
+
+## Key Learning
+The project reinforced that fine-tuning is different from prompt engineering.
+Prompt engineering changes how an existing model is instructed at inference time, while fine-tuning uses training examples to adapt model behavior.
+It also demonstrated the practical importance of API permissions and service availability when deploying hosted AI workflows.
+
+## Project Outcome
+This project demonstrates hands-on experience with the OpenAI fine-tuning workflow and the practical challenges associated with implementing hosted LLM customization.
