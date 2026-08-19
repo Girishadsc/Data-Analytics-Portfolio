@@ -1,401 +1,951 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Girisha | Applied Data Scientist</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Girisha | Applied Data Scientist Portfolio</title>
 
-    <!-- Bootstrap Icons -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <meta
+        name="description"
+        content="Girisha's professional portfolio showcasing applied data science, business analytics, machine learning, Generative AI, and responsible AI projects."
+    >
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
 
     <style>
 
-        body{
-            font-family:'Poppins',sans-serif;
-            scroll-behavior:smooth;
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
         }
 
-        .hero{
-            background:linear-gradient(135deg,#0d6efd,#3d8bfd);
-            color:white;
-            padding:120px 20px;
+        .navbar-brand {
+            font-weight: 700;
         }
 
-        .section-title{
-            font-weight:700;
-            margin-bottom:40px;
+        /* Hero */
+
+        .hero {
+            background: linear-gradient(135deg, #0d6efd, #6610f2);
+            color: white;
+            padding: 100px 20px;
         }
 
-        .skill-badge{
-            margin:5px;
-            font-size:.95rem;
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
 
-        .project-card{
-            transition:.3s;
+        .hero h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin-bottom: 20px;
         }
 
-        .project-card:hover{
-            transform:translateY(-6px);
-            box-shadow:0 12px 25px rgba(0,0,0,.15);
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
         }
 
-        footer{
-            background:#212529;
-            color:white;
-            padding:30px;
+        .hero-buttons {
+            margin-top: 25px;
         }
 
-        .navbar{
-            box-shadow:0 2px 10px rgba(0,0,0,.08);
+        /* General Sections */
+
+        .section {
+            padding: 70px 20px;
+        }
+
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .section-intro {
+            max-width: 850px;
+            margin: 0 auto 40px;
+            color: #666;
+            text-align: center;
+        }
+
+        /* About */
+
+        .about-text {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+        }
+
+        /* Skills */
+
+        .skill-card {
+            height: 100%;
+            background: white;
+            border: none;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+
+        .skill-card h4 {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .skill-card ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+
+        /* Featured Projects */
+
+        .project-card {
+            height: 100%;
+            background: white;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        .project-card .card-body {
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .project-card p {
+            color: #555;
+        }
+
+        .project-button {
+            margin-top: auto;
+            padding-top: 20px;
+        }
+
+        /* Contact */
+
+        .contact-section {
+            background-color: #ffffff;
+        }
+
+        .contact-card {
+            max-width: 800px;
+            margin: auto;
+            padding: 40px;
+            background: #f8f9fa;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+        }
+
+        .contact-card a {
+            text-decoration: none;
+        }
+
+        /* Footer */
+
+        footer {
+            background-color: #212529;
+            color: white;
+            padding: 30px 20px;
+            text-align: center;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
     </style>
 
 </head>
 
+
 <body>
 
-<!-- Navigation -->
 
-<nav class="navbar navbar-expand-lg bg-white sticky-top">
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
 
-<div class="container">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-<a class="navbar-brand fw-bold" href="#">Girisha</a>
+    <div class="container">
 
-<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-<span class="navbar-toggler-icon"></span>
-</button>
+        <a
+            class="navbar-brand"
+            href="index.html">
 
-<div class="collapse navbar-collapse" id="menu">
+            Girisha | Applied Data Scientist
 
-<ul class="navbar-nav ms-auto">
+        </a>
 
-<li class="nav-item">
-<a class="nav-link" href="#about">About</a>
-</li>
 
-<li class="nav-item">
-<a class="nav-link" href="projects.html">Projects</a>
-</li>
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
 
-<li class="nav-item">
-<a class="nav-link" href="#skills">Skills</a>
-</li>
+            <span class="navbar-toggler-icon"></span>
 
-<li class="nav-item">
-<a class="nav-link" href="#contact">Contact</a>
-</li>
+        </button>
 
-</ul>
 
-</div>
+        <div
+            class="collapse navbar-collapse"
+            id="navbarNav">
 
-</div>
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link active"
+                        href="index.html">
+
+                        About
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="projects.html">
+
+                        Work / Projects
+
+                    </a>
+
+                </li>
+
+
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#contact">
+
+                        Contact
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
 
 </nav>
 
-<!-- Hero -->
 
-<section class="hero text-center">
 
-<div class="container">
+<!-- =========================================================
+     HERO / INTRODUCTION
+========================================================= -->
 
-<h1 class="display-4 fw-bold">
+<section class="hero">
 
-Hi, I'm Girisha
+    <div class="container text-center">
 
-</h1>
+        <h1>
+            Girisha
+        </h1>
 
-<h3 class="mt-3">
+        <h2>
+            Applied Data Scientist | Business Analytics | Machine Learning | Generative AI
+        </h2>
 
-Applied Data Scientist
+        <p>
 
-</h3>
+            I develop data-driven solutions that transform complex
+            business problems into actionable insights using analytics,
+            machine learning, and responsible Generative AI.
 
-<p class="lead mt-4">
+        </p>
 
-Specializing in Business Analytics, Machine Learning, and Generative AI.
 
-</p>
+        <div class="hero-buttons">
 
-<p class="col-lg-8 mx-auto">
+            <a
+                href="projects.html"
+                class="btn btn-light btn-lg me-2">
 
-I build data-driven solutions that transform complex business challenges into actionable insights using business analytics, machine learning, and responsible AI.
+                View My Projects
 
-</p>
+            </a>
 
-<div class="mt-4">
 
-<a href="projects.html" class="btn btn-light btn-lg me-3">
+            <a
+                href="#contact"
+                class="btn btn-outline-light btn-lg">
 
-View My Projects
+                Contact Me
 
-</a>
+            </a>
 
-<a href="resume/Girisha_Resume.pdf"
-class="btn btn-outline-light btn-lg">
+        </div>
 
-Download Resume
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- About -->
-
-<section id="about" class="py-5">
-
-<div class="container">
-
-<h2 class="section-title text-center">
-
-About Me
-
-</h2>
-
-<div class="row align-items-center">
-
-<div class="col-lg-8 mx-auto">
-
-<p>
-
-I am an Applied Data Scientist passionate about transforming data into meaningful business insights. My graduate studies and hands-on projects have provided experience across the complete data science lifecycle—from data preparation and exploratory analysis to predictive modeling, visualization, and AI-powered applications.
-
-</p>
-
-<p>
-
-My portfolio highlights projects involving business intelligence, machine learning, natural language processing, retrieval-augmented generation (RAG), and generative AI. I enjoy solving real-world business problems while emphasizing responsible AI, transparency, and effective communication of technical findings.
-
-</p>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- Projects -->
 
-<section id="projects" class="py-5 bg-light">
 
-<div class="container">
+<!-- =========================================================
+     ABOUT
+========================================================= -->
 
-<h2 class="section-title text-center">
+<section class="section">
 
-Featured Case Studies
+    <div class="container">
 
-</h2>
+        <h2 class="section-title text-center">
+            About Me
+        </h2>
 
-<div class="row">
 
-<div class="col-md-6">
+        <div class="about-text">
 
-<div class="card project-card">
+            <p>
 
-<img src="TSA-Complaint-Analysis/images/tsa-dashboard-overview.png"
-class="card-img-top"
-alt="TSA Dashboard">
+                I am an Applied Data Scientist with a focus on
+                business analytics, machine learning, data visualization,
+                and Generative AI. My work combines technical problem
+                solving with an emphasis on understanding the business
+                question behind the data.
 
-<div class="card-body">
+            </p>
 
-<h4>
 
-TSA Complaint Analysis Dashboard
+            <p>
 
-</h4>
+                Through academic and applied projects, I have worked with
+                real-world datasets to perform exploratory data analysis,
+                develop predictive models, evaluate model performance,
+                build dashboards, and communicate analytical findings
+                through clear visualizations.
 
-<p>
+            </p>
 
-Analyzed TSA passenger complaint data to identify operational trends, customer experience issues, and opportunities for service improvement through interactive dashboards and business intelligence.
 
-</p>
+            <p>
 
-<span class="badge bg-primary">Python</span>
+                My machine learning experience includes regression,
+                classification, ensemble methods, feature engineering,
+                and model evaluation using metrics such as MAE, RMSE,
+                and R².
 
-<span class="badge bg-primary">Power BI</span>
+            </p>
 
-<span class="badge bg-primary">Business Analytics</span>
 
-<div class="mt-3">
+            <p>
 
-<a href="TSA-Complaint-Analysis/"
-class="btn btn-primary">
+                I have also developed hands-on experience with Generative AI
+                technologies, including OpenAI APIs, LLM-based applications,
+                fine-tuning, LoRA, document information extraction, and
+                MLflow-based experiment tracking and observability.
 
-View Project
+            </p>
 
-</a>
 
-</div>
+            <p>
 
-</div>
+                I approach AI development with an emphasis on responsible
+                use, recognizing the importance of privacy, fairness,
+                transparency, security, governance, and human oversight when
+                applying AI to real-world problems.
 
-</div>
+            </p>
 
-</div>
+        </div>
 
-<div class="col-md-6">
-
-<div class="card project-card">
-
-<img src="Childcare-Pricing-Analysis/images/childcare-pricing-comparison.png"
-class="card-img-top"
-alt="Childcare Pricing">
-
-<div class="card-body">
-
-<h4>
-
-Childcare Pricing Analysis
-
-</h4>
-
-<p>
-
-Explored childcare pricing trends through statistical analysis and visualization to identify affordability patterns and support informed decision-making.
-
-</p>
-
-<span class="badge bg-success">Python</span>
-
-<span class="badge bg-success">Visualization</span>
-
-<span class="badge bg-success">Statistics</span>
-
-<div class="mt-3">
-
-<a href="Childcare-Pricing-Analysis/"
-class="btn btn-success">
-
-View Project
-
-</a>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
+    </div>
 
 </section>
 
-<!-- Skills -->
 
-<section id="skills" class="py-5">
 
-<div class="container">
+<!-- =========================================================
+     CORE SKILLS
+========================================================= -->
 
-<h2 class="section-title text-center">
+<section class="section bg-light">
 
-Technical Skills
+    <div class="container">
 
-</h2>
+        <h2 class="section-title text-center">
+            Core Skills
+        </h2>
 
-<div class="text-center">
 
-<span class="badge bg-dark skill-badge">Python</span>
-<span class="badge bg-dark skill-badge">SQL</span>
-<span class="badge bg-dark skill-badge">Machine Learning</span>
-<span class="badge bg-dark skill-badge">Power BI</span>
-<span class="badge bg-dark skill-badge">Tableau</span>
-<span class="badge bg-dark skill-badge">OpenAI API</span>
-<span class="badge bg-dark skill-badge">Generative AI</span>
-<span class="badge bg-dark skill-badge">RAG</span>
-<span class="badge bg-dark skill-badge">LoRA</span>
-<span class="badge bg-dark skill-badge">Git</span>
-<span class="badge bg-dark skill-badge">GitHub</span>
-<span class="badge bg-dark skill-badge">Jupyter Notebook</span>
+        <p class="section-intro">
 
-</div>
+            My portfolio demonstrates a combination of analytical,
+            machine learning, Generative AI, and communication skills.
 
-</div>
+        </p>
+
+
+        <div class="row g-4">
+
+
+            <!-- Data Analytics -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="skill-card">
+
+                    <h4>
+                        Data Analytics
+                    </h4>
+
+                    <ul>
+
+                        <li>Data Cleaning</li>
+
+                        <li>Exploratory Data Analysis</li>
+
+                        <li>Feature Engineering</li>
+
+                        <li>Statistical Analysis</li>
+
+                        <li>Data Visualization</li>
+
+                        <li>Business Insights</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- Machine Learning -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="skill-card">
+
+                    <h4>
+                        Machine Learning
+                    </h4>
+
+                    <ul>
+
+                        <li>Regression</li>
+
+                        <li>Classification</li>
+
+                        <li>Random Forest</li>
+
+                        <li>Gradient Boosting</li>
+
+                        <li>Model Evaluation</li>
+
+                        <li>Scikit-learn</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- Generative AI -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="skill-card">
+
+                    <h4>
+                        Generative AI
+                    </h4>
+
+                    <ul>
+
+                        <li>OpenAI API</li>
+
+                        <li>Large Language Models</li>
+
+                        <li>Prompt Engineering</li>
+
+                        <li>Fine-Tuning</li>
+
+                        <li>LoRA</li>
+
+                        <li>Document Extraction</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <!-- Tools -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="skill-card">
+
+                    <h4>
+                        Tools & Platforms
+                    </h4>
+
+                    <ul>
+
+                        <li>Python</li>
+
+                        <li>Pandas & NumPy</li>
+
+                        <li>Jupyter Notebook</li>
+
+                        <li>MLflow</li>
+
+                        <li>GitHub</li>
+
+                        <li>Power BI / Tableau</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
 
 </section>
 
-<!-- Contact -->
 
-<section id="contact" class="py-5 bg-light">
 
-<div class="container text-center">
+<!-- =========================================================
+     FEATURED PROJECTS
+========================================================= -->
 
-<h2 class="section-title">
+<section class="section">
 
-Let's Connect
+    <div class="container">
 
-</h2>
+        <h2 class="section-title text-center">
+            Featured Projects
+        </h2>
 
-<p>
 
-I'm always interested in opportunities involving Data Science, Business Analytics, Machine Learning, and AI.
+        <p class="section-intro">
 
-</p>
+            Selected projects demonstrating my experience across
+            business analytics, predictive modeling, and Generative AI.
 
-<p>
+        </p>
 
-<i class="bi bi-github"></i>
 
-<a href="https://github.com/Girishadsc">
+        <div class="row g-4">
 
-GitHub
 
-</a>
+            <!-- Airbnb -->
 
-</p>
+            <div class="col-md-6 col-lg-4">
 
-<p>
+                <div class="card project-card">
 
-<i class="bi bi-linkedin"></i>
+                    <div class="card-body">
 
-<a href="https://linkedin.com/in/girisha-lingaiah-a0245163">
+                        <h3>
+                            Airbnb NYC Price Prediction
+                        </h3>
 
-Linkedin
+                        <p>
 
-</a>
+                            Developed an end-to-end machine learning solution
+                            using the AB_NYC_2019 dataset. The project included
+                            data preparation, exploratory analysis, feature
+                            engineering, regression modeling, ensemble learning,
+                            and log-price modeling.
 
-</p>
+                        </p>
 
-<p>
+                        <p>
 
-<i class="bi bi-envelope-fill"></i>
+                            Random Forest achieved the strongest performance
+                            among the evaluated models with an R² of
+                            <strong>0.2374</strong>.
 
-Girishadsc@gmail.com
+                        </p>
 
-</p>
 
-</div>
+                        <div class="project-button">
+
+                            <a
+                                href="Airbnb-NYC-Price-Prediction/"
+                                class="btn btn-primary">
+
+                                View Project →
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- TSA -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card project-card">
+
+                    <div class="card-body">
+
+                        <h3>
+                            TSA Complaint Analysis
+                        </h3>
+
+                        <p>
+
+                            Analyzed TSA complaint data to identify
+                            passenger dissatisfaction trends across
+                            U.S. airports and developed visualizations
+                            to communicate geographic and categorical
+                            patterns.
+
+                        </p>
+
+
+                        <div class="project-button">
+
+                            <a
+                                href="TSA-Complaint-Analysis/"
+                                class="btn btn-primary">
+
+                                View Project →
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Generative AI -->
+
+            <div class="col-md-6 col-lg-4">
+
+                <div class="card project-card">
+
+                    <div class="card-body">
+
+                        <h3>
+                            Generative AI & MLflow
+                        </h3>
+
+                        <p>
+
+                            Developed a Generative AI application workflow
+                            using the OpenAI API and MLflow to track and
+                            evaluate application runs through an experiment
+                            named <strong>GenAI_book</strong>.
+
+                        </p>
+
+
+                        <div class="project-button">
+
+                            <a
+                                href="MLflow-GenAI-Observability/"
+                                class="btn btn-primary">
+
+                                View Project →
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="text-center mt-5">
+
+            <a
+                href="projects.html"
+                class="btn btn-outline-primary btn-lg">
+
+                View All 10 Projects →
+
+            </a>
+
+        </div>
+
+    </div>
 
 </section>
 
-<footer class="text-center">
 
-© 2026 Girisha | Applied Data Scientist
+
+<!-- =========================================================
+     WHAT I BRING
+========================================================= -->
+
+<section class="section bg-light">
+
+    <div class="container">
+
+        <h2 class="section-title text-center">
+            What I Bring
+        </h2>
+
+
+        <div class="about-text">
+
+            <p>
+
+                <strong>Business-focused analytics:</strong>
+                I focus on connecting technical analysis to the
+                underlying business question and decision-making need.
+
+            </p>
+
+
+            <p>
+
+                <strong>End-to-end data science:</strong>
+                My projects cover the complete workflow from data
+                preparation and exploration through modeling,
+                evaluation, visualization, and communication.
+
+            </p>
+
+
+            <p>
+
+                <strong>Generative AI experience:</strong>
+                I have explored LLM applications, OpenAI APIs,
+                document extraction, fine-tuning, LoRA, and
+                experiment tracking.
+
+            </p>
+
+
+            <p>
+
+                <strong>Responsible AI mindset:</strong>
+                I recognize that successful AI solutions require
+                attention to privacy, fairness, transparency,
+                security, governance, and appropriate human oversight.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section
+    id="contact"
+    class="section contact-section">
+
+    <div class="container">
+
+        <h2 class="section-title text-center">
+            Contact
+        </h2>
+
+
+        <p class="section-intro">
+
+            I welcome opportunities to connect about data science,
+            analytics, machine learning, and Generative AI.
+
+        </p>
+
+
+        <div class="contact-card text-center">
+
+            <p>
+
+                <strong>GitHub</strong><br>
+
+                <a
+                    href="https://github.com/Girishadsc/Data-Analytics-Portfolio/tree/final-portfolio-submission"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    github
+
+                </a>
+
+            </p>
+
+
+            <p>
+
+                <strong>LinkedIn</strong><br>
+
+                <a
+                    href="https://linkedin.com/in/girisha-lingaiah-a0245163"
+                    target="_blank"
+                    rel="noopener noreferrer">
+
+                    LinkedIn Profile
+
+                </a>
+
+            </p>
+
+
+            <p>
+
+                <strong>Email</strong><br>
+
+                <a href="mailto:Girishadsc@gmail.com">
+
+                    Girish
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <p class="mb-2">
+
+            © 2026 Girisha | Applied Data Scientist
+
+        </p>
+
+
+        <div>
+
+            <a
+                href="index.html">
+
+                About
+
+            </a>
+
+
+            <a
+                href="projects.html">
+
+                Projects
+
+            </a>
+
+
+            <a
+                href="#contact">
+
+                Contact
+
+            </a>
+
+
+            <a
+                href="https://github.com/Girishadsc"
+                target="_blank"
+                rel="noopener noreferrer">
+
+                GitHub
+
+            </a>
+
+        </div>
+
+    </div>
 
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- Bootstrap JavaScript -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
 
 </body>
 
 </html>
+```
