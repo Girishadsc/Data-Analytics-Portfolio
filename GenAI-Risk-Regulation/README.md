@@ -1,64 +1,109 @@
-# TSA Complaint Analysis Dashboard
+# Generative AI: Risks and Regulatory Challenges
 
-## Transforming Passenger Feedback Data into Operational Insights
+## Researching the Responsible Adoption of Generative AI
 
 
 ## Project Overview
 
-Customer feedback provides valuable information about service quality, but organizations need effective analytics solutions to identify trends and improvement opportunities.
+This project examines the emerging risks and regulatory challenges associated with Generative AI.
 
-This project analyzes TSA passenger complaint data to identify patterns across airports, complaint categories, and time periods. The goal was to transform raw complaint data into actionable insights through data analysis and visualization.
+The research explores how rapidly advancing Generative AI systems create opportunities for productivity, innovation, and economic growth while also introducing challenges related to privacy, bias, misinformation, security, intellectual property, transparency, and accountability.
 
+The project emphasizes the importance of balancing innovation with responsible AI governance.
 
+## Research Focus
+The research examines several major areas:
+
+•	Privacy and sensitive data 
+
+•	Bias and discrimination 
+
+•	Misinformation and synthetic content 
+
+•	Security risks 
+
+•	Intellectual property 
+
+•	Transparency and exploitability 
+
+•	Accountability 
+
+•	Regulatory uncertainty 
+
+•	Responsible AI governance 
+
+## Regulatory Context
+A major focus of the research was Executive Order 14110, issued on October 30, 2023, which established a U.S. government-wide approach to addressing the opportunities and risks associated with artificial intelligence.
+The project uses this regulatory context to examine how governments and organizations are responding to the rapid development of Generative AI.
 ## Business Problem
+Organizations increasingly want to adopt Generative AI while managing associated risks.
+The central challenge is:
+How can organizations obtain the benefits of Generative AI while maintaining appropriate controls for privacy, security, fairness, transparency, and accountability?
+## Research Approach
+The project used research-based analysis of:
 
-Transportation organizations receive thousands of passenger complaints every year. Without effective analysis, it is difficult to determine:
+•	Government policy 
 
-- Which airports experience higher complaint volumes?
-- What issues contribute most to dissatisfaction?
-- Where should operational improvements be prioritized?
+•	Regulatory developments 
+
+•	Industry concerns 
+
+•	Academic and professional perspectives 
+
+•	Generative AI risk categories 
+
+•	Responsible AI practices 
+
+## Key Areas of Analysis
+### Privacy
+Generative AI systems can process large amounts of information, creating concerns about the use of sensitive or confidential data.
+### Bias and Fairness
+Models may reproduce or amplify biases contained in training data or introduced through downstream applications.
+### Misinformation
+Generative AI can produce convincing synthetic text, images, audio, and video that may be used to spread misinformation.
+### Security
+Generative AI introduces new attack surfaces, including prompt injection, data leakage, model misuse, and automated malicious content generation.
+### Intellectual Property
+Organizations must consider copyright, ownership, licensing, and appropriate use of generated content.
+### Governance
+Organizations need policies, controls, monitoring, documentation, and human oversight to manage AI systems responsibly.
+## Key Learning
+The research demonstrates that Generative AI governance cannot be treated as an afterthought.
+Responsible AI requires a combination of:
+
+•	Technical controls 
+
+•	Organizational policies 
+
+•	Human oversight 
+
+•	Risk assessment 
+
+•	Regulatory awareness 
+
+•	Transparency 
+
+•	Continuous monitoring 
+
+## Technologies / Skills
+
+•	Generative AI 
+
+•	AI Governance 
+
+•	Responsible AI 
+
+•	Regulatory Research 
+
+•	Risk Analysis 
+
+•	Technical Writing 
+
+•	Policy Analysis 
+
+•	Critical Thinking 
+
+## Project Outcome
+This project demonstrates the ability to evaluate Generative AI not only from a technical perspective but also from business, ethical, regulatory, and governance perspectives.
 
 
-## Analytical Approach
-
-The project followed a complete data analytics workflow:
-
-- Data cleaning and preparation
-- Exploratory data analysis
-- Complaint category analysis
-- Geographic analysis
-- Dashboard development
-
-
-## Dashboard Preview
-
-### TSA Complaint Dashboard
-
-![TSA Dashboard](images/tsa-dashboard-overview.png)
-
-
-### Geographic Complaint Analysis
-
-![Complaint Map](images/tsa-complaint-map.png)
-
-
-## Tools and Technologies
-
-- Python
-- Pandas
-- Power BI
-- Data Visualization
-- Exploratory Data Analysis
-
-
-## Skills Demonstrated
-
-- Business Analytics
-- Data Storytelling
-- Dashboard Development
-- Customer Experience Analytics
-
-
-## Business Impact
-
-This project demonstrates how organizations can transform customer feedback data into actionable insights that support operational improvements and better customer experiences.
