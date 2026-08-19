@@ -1,64 +1,91 @@
-# TSA Complaint Analysis Dashboard
+# FIFA World Cup RAG
 
-## Transforming Passenger Feedback Data into Operational Insights
+## Exploring LLM-Based Question Answering Using FIFA World Cup Information
 
 
 ## Project Overview
 
-Customer feedback provides valuable information about service quality, but organizations need effective analytics solutions to identify trends and improvement opportunities.
+This project explores the development of a question-answering assistant using information about the 2022 FIFA World Cup.
 
-This project analyzes TSA passenger complaint data to identify patterns across airports, complaint categories, and time periods. The goal was to transform raw complaint data into actionable insights through data analysis and visualization.
+The project was developed as part of a Generative AI learning exercise and demonstrates how an LLM can answer questions using a provided knowledge source.
 
-
-## Business Problem
-
-Transportation organizations receive thousands of passenger complaints every year. Without effective analysis, it is difficult to determine:
-
-- Which airports experience higher complaint volumes?
-- What issues contribute most to dissatisfaction?
-- Where should operational improvements be prioritized?
+The workflow involved obtaining FIFA World Cup information from a Wikipedia page and using the content as contextual information for question answering.
 
 
-## Analytical Approach
+## Objective
+The objective was to create an assistant capable of answering questions such as:
+•	Which country hosted the 2022 FIFA World Cup? 
+•	Which teams participated? 
+•	Who won the tournament? 
+•	What happened during specific matches? 
+•	What information is available about the tournament? 
+## Approach
+The project explored a document-based question-answering workflow:
+1.	Obtain World Cup information. 
+2.	Process the source content. 
+3.	Provide relevant information as context. 
+4.	Send the context and user question to an LLM. 
+5.	Generate a natural-language response. 
+## Important Project Learning
+An important lesson from this project was understanding the difference between LLM-based question answering and a true Retrieval-Augmented Generation (RAG) architecture.
+The initial implementation supplied the entire Wikipedia page to the LLM. It did not implement the full retrieval architecture expected of a production RAG system, such as:
+•	Document chunking 
 
-The project followed a complete data analytics workflow:
+•	Embedding generation 
 
-- Data cleaning and preparation
-- Exploratory data analysis
-- Complaint category analysis
-- Geographic analysis
-- Dashboard development
+•	Vector indexing 
 
+•	Vector database retrieval 
 
-## Dashboard Preview
+•	Retrieval of only the most relevant chunks 
 
-### TSA Complaint Dashboard
+•	Generation based on retrieved context 
+This distinction became an important part of the learning outcome of the project.
+## Technologies
+•	Python 
 
-![TSA Dashboard](images/tsa-dashboard-overview.png)
+•	OpenAI API 
 
+•	Large Language Models 
 
-### Geographic Complaint Analysis
+•	Natural Language Processing 
 
-![Complaint Map](images/tsa-complaint-map.png)
+•	Wikipedia content 
 
-
-## Tools and Technologies
-
-- Python
-- Pandas
-- Power BI
-- Data Visualization
-- Exploratory Data Analysis
-
+•	Jupyter Notebook 
 
 ## Skills Demonstrated
+•	LLM Application Development 
 
-- Business Analytics
-- Data Storytelling
-- Dashboard Development
-- Customer Experience Analytics
+•	Prompt Engineering 
 
+•	Context-Based Question Answering 
 
-## Business Impact
+•	API Integration 
 
-This project demonstrates how organizations can transform customer feedback data into actionable insights that support operational improvements and better customer experiences.
+•	Debugging API/data-processing issues 
+
+•	Understanding RAG architecture 
+
+•	Critical evaluation of Generative AI implementations 
+## Key Learning
+The most important technical lesson was that simply providing a large document to an LLM is not equivalent to implementing a Retrieval-Augmented Generation system.
+A production-quality RAG solution should separate knowledge retrieval from language generation, allowing the system to retrieve relevant information from an indexed knowledge base before generating a response.
+## Future Enhancement
+A future version could implement a complete RAG architecture using:
+
+•	Document chunking 
+
+•	Embeddings 
+
+•	Vector database/index 
+
+•	Similarity search 
+
+•	Retrieved-context prompting 
+
+•	Source attribution 
+
+## Project Outcome
+This project demonstrates hands-on experience with LLM APIs and, importantly, demonstrates an understanding of the architectural requirements and limitations of LLM-based question-answering systems.
+
