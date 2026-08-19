@@ -1,64 +1,98 @@
-# TSA Complaint Analysis Dashboard
+# LoRA Fine-Tuning for GPT-2
 
-## Transforming Passenger Feedback Data into Operational Insights
+## Parameter-Efficient Fine-Tuning of a Language Model
 
 
 ## Project Overview
 
-Customer feedback provides valuable information about service quality, but organizations need effective analytics solutions to identify trends and improvement opportunities.
+This project explores Low-Rank Adaptation (LoRA) as a parameter-efficient approach for fine-tuning a GPT-2 language model.
 
-This project analyzes TSA passenger complaint data to identify patterns across airports, complaint categories, and time periods. The goal was to transform raw complaint data into actionable insights through data analysis and visualization.
+The project was based on a hands-on implementation using the Hugging Face ecosystem and an English quotations dataset.
 
+The goal was to understand how a pretrained language model can be adapted to a specific style or domain without updating all of the model's parameters.
 
-## Business Problem
+## Objective
+The project investigates:
+•	How LoRA works 
 
-Transportation organizations receive thousands of passenger complaints every year. Without effective analysis, it is difficult to determine:
+•	How pretrained language models can be adapted efficiently 
 
-- Which airports experience higher complaint volumes?
-- What issues contribute most to dissatisfaction?
-- Where should operational improvements be prioritized?
+•	How training data is prepared for language-model fine-tuning 
 
+•	How GPU acceleration supports model training 
 
-## Analytical Approach
+•	How parameter-efficient fine-tuning differs from full model fine-tuning 
 
-The project followed a complete data analytics workflow:
+## Dataset
+The project used the Abirate/english_quotes dataset available through the Hugging Face ecosystem.
+The dataset contains English quotations that provide text examples for language-model adaptation.
+## Methodology
+The workflow included:
+1.	Loading the pretrained GPT-2 model. 
+2.	Loading and preparing the quotations dataset. 
+3.	Tokenizing text for model training. 
+4.	Configuring LoRA-based parameter-efficient training. 
+5.	Preparing the training environment. 
+6.	Running the fine-tuning workflow using GPU resources. 
+7.	Evaluating generated model behavior. 
+## Why LoRA?
+Full model fine-tuning can require substantial computational resources because all model parameters may need to be updated.
+LoRA addresses this by introducing trainable low-rank matrices while keeping the majority of the pretrained model parameters frozen.
+This provides a more computationally efficient approach to adapting language models.
+## Computing Environment
+The project was moved to Google Colab with a T4 GPU because the local Windows/CPU environment was not appropriate for efficient model training.
+During development, a dependency compatibility issue involving torchao was encountered and resolved by updating the package.
+## Technologies
+•	Python 
 
-- Data cleaning and preparation
-- Exploratory data analysis
-- Complaint category analysis
-- Geographic analysis
-- Dashboard development
+•	PyTorch 
 
+•	Hugging Face Transformers 
 
-## Dashboard Preview
+•	Hugging Face Datasets 
 
-### TSA Complaint Dashboard
+•	PEFT / LoRA 
 
-![TSA Dashboard](images/tsa-dashboard-overview.png)
+•	GPT-2 
 
+•	Google Colab 
 
-### Geographic Complaint Analysis
-
-![Complaint Map](images/tsa-complaint-map.png)
-
-
-## Tools and Technologies
-
-- Python
-- Pandas
-- Power BI
-- Data Visualization
-- Exploratory Data Analysis
-
+•	NVIDIA T4 GPU 
 
 ## Skills Demonstrated
+•	Large Language Models 
 
-- Business Analytics
-- Data Storytelling
-- Dashboard Development
-- Customer Experience Analytics
+•	Fine-Tuning 
 
+•	Parameter-Efficient Fine-Tuning 
 
-## Business Impact
+•	LoRA 
 
-This project demonstrates how organizations can transform customer feedback data into actionable insights that support operational improvements and better customer experiences.
+•	Hugging Face 
+
+•	PyTorch 
+
+•	Dataset Preparation 
+
+•	Tokenization 
+
+•	GPU-Based Model Training 
+
+•	Troubleshooting ML Dependencies 
+
+## Key Learning
+The project provided hands-on experience with the practical considerations involved in fine-tuning language models, including:
+•	Dataset preparation 
+
+•	Tokenization 
+
+•	GPU requirements 
+
+•	Library compatibility 
+
+•	Parameter-efficient training 
+
+•	Model adaptation 
+
+## Project Outcome
+This project demonstrates practical experience moving beyond simply using a pretrained language model and into the process of adapting a language model for a specific text domain using parameter-efficient fine-tuning.
